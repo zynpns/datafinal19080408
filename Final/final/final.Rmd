@@ -1,0 +1,227 @@
+---
+title: "Factors Affecting Income, Main Expense Items and
+Investment Preferences" 
+author: 
+  - NAS, Zeynep [^1]
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{english}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+abstract: |
+   In this study, the factors affecting the income of people in Turkey have been tried to be determined depending on variable factors such as social identity (age, gender, marital status), education, experience, occupation, sector classification, industry classification. Accordingly, people's income levels and their satisfaction with their income were also measured. Based on all these parameters, the main expenditure items and investment preferences are analyzed. 
+  
+    Keywords : Income, Expenditure, Investment, Preference.
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+<!-- ======================================================================= -->
+<!-- ============================== FOOTNOTES ============================== -->
+<!-- ======================================================================= -->
+[^1]: 19080408, [Github Repo](https://github.com/zynpns/datafinal19080408)
+
+
+# Introduction
+
+Since the first day of humanity, many types of production-consumption, trade have been carried out on Earth. There is only one important factor that people have for this production and consumption preference: income. Income is calculated by money transfers, which have changed and developed over the centuries. The exchange made in the early times of history was later replaced by money as a final substitute exchanger. However, consumption habits have also changed and even the idea of investing has emerged so that the money held not to be spent does not lose its value or gain more value.
+  In this study, we will discuss what are the main factors affecting income, how consumption and investment habits change depending on these factors.
+The process of preparing the dataset used in this study started with the preparation of a 12-question questionnaire in Turkish, created by the project owner (Zeynep NAS) on Google Forms. (https://forms.gle/yx5Y66U1P9oqXLNr8). Later, the prepared questionnaire was directed to the appropriate people for the research question via social media. The questionnaire, which was answered by a total of 53 people, was translated from Google Spreadsheets into English, into the appropriate file (.csv) has been introduced and has become suitable for processing. 
+In this project, the issues to be processed through the dataset will be taken into account primarily the factors affecting income (age, job, gender, education, experience etc.), and then the basic expense item preferred according to income (food, hygiene products, clothing, education etc.) and investment (gold, foreign exchange, bonds, bills, real estate etc.) preferences .
+
+## Literature Review
+
+The factors affecting income, which are the main subject of this study, have also been investigated and addressed by various sources. Income is an element determined by various independent factors. Among these elements are age, gender, work, experience.
+ When it comes to gender discrimination, it was found that [@shambrook2011research] men received higher salaries than women. Paid significantly higher salaries for associates, bachelor's, master's and doctoral levels to cinema men with the same level of educational achievement. Women were only given higher salaries than men in the ”some college" education category.
+ According to Jennifer Shambrook [@shambrook2011research], the relationship of higher education with high income has been calculated by a positive relationship between education level and income. [@beaton1975influence]The results show that those with a master's or doctoral degree will be higher.Lower income levels than those with low educational achievement. The exception to this is for those with lower educational achievement and a research level of more than 20 years of management experience. 
+  As mentioned in the first paragraph, what makes education an exception is experience. [@davidson1978econometric]  Shows that the mean income level increases with increased years of experience.There is a significant difference between the income levels of those with less than one year of experience and those with more than five years of experience.For all other comparisons between groups, the difference in income level is highly significant, and there is a strong association between level of experience and level of salary.
+  In addition to the technology gained in the field of business, it is also very important which sector we specialize in.[@chaudhry2011exploring] The findings of the study show that the salary satisfaction score is very slightly higher for public sector organizations, depending on private sector organizations.Accordingly,managers in public organizations value job security more than their colleagues employed by private enterprises and administrations.
+  We examined the literature review conducted on and among the factors affecting income by dividing it into main parts. Now let's take a look at the situations in which we distribute income, that is, expenses and investment preferences.
+  Consumption expenditures, play an important role in economic growth as a driving force of the economy. As one of the main determinants of total demand, the increase in consumption expenditures affects the level of economic well-being of countries.[@perotti1994income] Due to this effect on the level of economic well-being, consumption expenditures have the property of being a leading indicator about the general state of the economy.
+  For this purpose, consumption functions were calculated in order to reveal the relationship of each expenditure group with total expenditure.[@uslu2018determining] Households allocate the largest share of their income to the housing, water, electricity, gas and other fuels expenditure group. However, education expenses also have a large share, while health expenditures are very low. While the government's spending is not very important in consumption  habits, the tax rate increases the unit of spending to a large extent.
+  Investing in Turkey is not used only to evaluate the remaining money.[@timur36enflasyonist] The recent economic fluctuations and inflation have caused the Turkish citizens not to want to keep their money in TL.For this reason, depositors tend to ignore the nature of national currency as a means of storing value and saving by turning to foreign currencies, which are known to have less inflationary effects, or investments that they think will provide protection from inflation.
+  On the other hand, it is believed that the concerns of the public about the national currency and the future negatively affect the life expectancy of many people, especially young households.[@ccalmacsur2018turkiye]
+It has been observed that people in this situation are generally turning to activities that can be characterized as “zero-sum”. The most popular of these activities, as evaluated in the study, were foreign exchange, gold, housing-land and the stock exchange. 
+
+# Data
+The dataset used in this study refers to "Factors Affecting Income, Main Expense Items and Investment Preferences". In order to create the dataset, the owner of the study (Zeynep NAS) prepared a 12-question questionnaire from Google Forms and organized the answers received first in Google Sheets and then in Excel to create the appropriate format.
+Of the 13-question questionnaire, 3 of the questions were socially relevant, describing the age, gender and marital status of the participants.
+Then, in order to determine the answers to our question on "factors affecting income", questions on education, job occupation, work experience, sector classification and line of business classification, which will affect income, were also presented to our respondents in order to measure some variables.
+The level of satisfaction with income and income is the most important part of our analysis, and is included in our database to bridge the "reasons for income" section listed above to the "investment and expenditure preferences" section that we will talk about in a moment.
+After looking at the factors affecting income, investment preferences and the areas where the most expenditures are made were presented with certain options according to the preference of the participants, but the questions were left open-ended in order to avoid overlooked points. In the Methods and Data Analysis section, the expenditure-income relationship and the investment-income relationship will be examined, and the extent to which people are satisfied with their income will be analyzed through these topics.
+But first, I would like to show you this table where we can see the age, income, experience and satisfaction level of the 53 people who participated in the survey so that we can see more clearly the profile of the 53 people who participated in the survey and contributed to the creation of our database.
+
+```{r, echo=FALSE}
+library(readxl)
+Başlıksız_form_Yanıtlar_ <- read_excel("C:/Users/mns06/Downloads/Başlıksız form (Yanıtlar).xlsx", 
+    col_types = c("numeric", "text", "text", 
+        "text", "text", "text", "text", "numeric", 
+        "numeric", "numeric", "text", "text"))
+
+datasetc <-na.omit(Başlıksız_form_Yanıtlar_)
+```
+
+
+
+```{r, echo=FALSE}
+library(tidyverse)
+
+library(xtable) 
+library(summarytools)
+library(dplyr)
+st_options(lang = "en")
+
+```
+
+
+
+```{r results='asis', echo=FALSE}
+datasetc %>%
+  select("Income", "Experience", "Age", "Satisfaction") %>% 
+  descr(stats = c("mean", "sd", "min", "med", "max"), transpose = TRUE) %>% 
+  xtable(caption = "Summary Statistics",
+         label = "tab:summary",
+         align = c("l", "c", "c", "c", "c","c")) %>% 
+  print(booktabs = TRUE, comment = FALSE, caption.placement = "top")
+
+
+```
+
+
+
+# Methods and Data Analysis
+In this section, let's go a little deeper in analyzing the profiles of the participants. First we will see it in simple terms using percentages and headcounts. Then, we will take our analysis to different dimensions using the necessary functions and graphs.
+The respondents we analyzed are between 21-66 years old, but the majority are between 30-50 years old. The most common age group is 33 years old (4%), followed by 49, 50, 55 years old (3% each).Of the people we analyzed, 45.3% (24 people) were male and 54.7% (29 people) were female. 64.2% were married (34 people) and 35.8% (19 people) were single.
+
+
+```{r,echo=FALSE, fig.width=10, fig.height=6}
+
+
+GGally::ggpairs(datasetc[ ,c( "Income","Experience","Age","Satisfaction")])
+```
+
+
+
+In the "education" tab as our first variable affecting the income impact factors, 1 person has a PhD, 1 person has a master's degree, 10 people have an associate's degree, 11 people have a high school diploma, and 30 people (56.6%) are university / bachelor's degree graduates. In the "sector classification", 33 people (62.3%) work in the private sector and 16 people (30.2%) work in the public sector.
+In terms of business line classification, 22.6% (12 respondents) of the respondents are in the commercial sector, 64.2% (34 respondents) in the private sector and 13.2% in the mixed sector. 
+
+In terms of work experience, 22.6% (12 people) chose 5 years, 13.2% (7 people) chose 10 years, 15.1% (8 people) chose 12 years, 5.7% (3 people) chose 15 years, and 43.4% (23 people) chose 20 years. In terms of salaries, we have a very diverse group of people, such that there is a student with an income of 1000 TL, people with an income of 8000-12000TL who receive a salary close to the minimum wage in Turkey, and even people with very high incomes such as 160.000TL-250000TL!
+
+
+```{r,echo=FALSE, fig.width=10, fig.height=6}
+library(ggplot2)
+ggplot(data=datasetc ,aes(x = Income,y =Experience )) +
+  geom_boxplot() +
+  labs(x = "Income",
+       y = "Experience") 
+
+```
+
+
+
+When it comes to income satisfaction, we don't have as wide a range as we have a range of salaries. 14 people are not satisfied with their income at all, 17 people are very slightly satisfied, 11 people are neutral about their income satisfaction, giving a score of 5. Out of 53 respondents, only 11 respondents scored higher than 5 and only 1 respondent was completely satisfied with their income. 
+
+
+Let us examine the variables income, education, sector, industry in a little more detail by performing regression analysis. The minimum value is -20456, meaning that some error terms take negative values, while the maximum value is 46959, meaning that some error terms take positive values. The median value is -905, meaning that half of the error terms are less than -905 and half are greater than -905. Residual standard error , the standard error of the residuals of the model with 42 degrees of freedom is 13420. Multiple R-squared refers to the explanatory power of the model and shows how much of the variance of the dependent variable it explains. In this case, the multiple R-square value is 0.879, which means that the independent variables (education, experience, sector, industry) together explain 87.9% of the variance of the dependent variable (income). It is an adjusted version of the multiple R-square and takes into account the number of independent variables in the model and the size of the dataset. In this case, the adjusted R-square value is 0.8531.  It is a statistical test that assesses the overall significance of the model. In this case, the F statistic value is 33.91 and is indicated to have 9 and 42 degrees of freedom. The p-value refers to the result of the hypothesis test on the F statistic. The expression "< 2.2e-16" indicates that the p-value is very small and the model is generally significant.
+
+
+```{r,echo=FALSE, fig.width=10, fig.height=6}
+model <- lm(Income ~ +Sector+`Business line`+ Experience +Education ,data = datasetc)
+
+coefficients <- coef(model)
+beta_0 <- coefficients[1]
+beta_1 <- coefficients[2]
+beta_2 <- coefficients[3]
+beta_3 <- coefficients[4]
+beta_4 <- coefficients[5]
+
+```
+
+
+
+$$
+ Y = 8398.568 + -3568.165 * X1 + -16098.58 * X2 + 9751.271 * X3 + -1509.702 * X4 
+$$
+
+
+Now we are in the last two parts that we will be aware of using percentages. These two parts are two important building blocks of our analysis.One is "Expenditures" and the other is "Investment". When we come to expenditure preferences, we see that basic food products have a very large share (47.2). Then the most important expenditure item is payments for bills (24.5%). In other words, the vast majority of our respondents have only the basic expenses to sustain their lives.
+
+
+```{r, echo=FALSE, fig.width=10, fig.height=6}
+
+spending_preferences <- c("Food", "Pay", "Prsnl", "Trspt", "Edu")
+spending_values <- c(47,24,10,12,7)
+
+spending_data <- data.frame(Spending = spending_preferences, Value = spending_values)
+
+spending_data <- spending_data[order(spending_data$Value, decreasing = TRUE), ]
+
+barplot(spending_data$Value, horiz = TRUE, names.arg = spending_data$Spending, col = "pink",
+        main = "Spending Preferences (%)", xlab = "Value as Percent ", ylab = "Spending Category")
+```
+
+
+In terms of investment preference, 32 respondents (60.4%) preferred to invest in gold. This was followed by 16 people preferring foreign currency, 8 people preferring time deposits, 12 people from 6+6 preferring stocks and shares, and 4 people from 2+2 preferring real estate and virtual currencies. 
+
+
+```{r,echo=FALSE, fig.width=10, fig.height=6}
+
+gold <- c(1500,60000)
+foreıgn_currency <- c(10000,40000)
+time_deposits <- c( 17000, 20000)
+stocks <- c(3600,5750)
+real_estate <- c(27000,45000)
+income <- c(1000-60000)
+
+plot(NULL, xlim = c(1, length(income)), ylim = c(0, max(max( gold, foreıgn_currency, time_deposits, stocks, real_estate, income))), 
+     xlab = "Main Values", ylab = "Income", main = " Investment Preferences and Income")
+
+lines(gold, col = "blue", type = "o", pch = 8)
+
+lines(foreıgn_currency, col = "red", type = "o", pch = 8)
+
+lines(time_deposits, col = "green", type = "o", pch = 8)
+
+lines(stocks, col = "orange", type = "o", pch = 8)
+
+lines(real_estate, col = "pink", type = "o", pch = 8)
+
+lines(income, col = "black", type = "o", pch = 8)
+
+
+legend("topleft", legend = c("gold ", "foreıgn_currency", "time_deposits", "stocks","real_estate","income"),
+       col = c("blue", "red", "green", "orange", "pink","black"), lty = 1, cex = 0.8)
+
+```
+
+
+# Conclusion
+As we conclude our analysis, let's take a closer look at the data and numbers we have seen.
+ First of all, when we look at the gender factor in percentiles, we find that women generally have lower incomes than men. However, education is not a factor that changes income much. The salaries of a teacher with a university degree and a technician with a high school degree are almost the same, and in some cases, even with less education, the salaries of people with more experience were much higher! As we will see in this parameter, the situations where age and the accompanying experience increased were the situations where income was the highest. As for the sector classification, we found that the public sector has lower salaries than the private sector, but people working in the public sector are much more satisfied with their income than people working in the private sector. This can show us the following: More intensive labor or working hours in the private sector equals higher salaries, while public sector employees are more satisfied with their working hours and environment. In other words, when we look at the factors affecting income, men are positive in terms of gender classification, while older people in terms of age (and of course more experienced) are more likely to be satisfied with their income than private sector workers, who get higher figures in terms of income.
+In the expenditure part, which is the first part of the second most important part of our research, we found that people give a large share to basic food supplies and payments regardless of their salary level. Of course, this situation can also be reconciled with inflation and low purchasing power in Turkey. Both people with a minimum salary and people with almost 20 times more income have given their top priority to food and bills, and the rest have taken on the education costs of their children instead of clothing, cosmetic-style necessities. As far as I understand by using these data, only a few single people make expenses that cannot be considered basic, while many married people try to confuse their children's and their own expenses. In other words, from a general point of view, the expenditure item has been collected into two large and basic parts, and people's behavior towards spending money has been abstained.
+To summarize our investment section, the vast majority of our researchers chose gold as the safest investment instrument, avoiding both volatile inflation data and volatile stock markets. Although gold has been sought for its equivalents since the day trade entered human life, it has always been highly sought after by the general public, regardless of their income level, as it is easily usable by people who do not have any financial knowledge. In recent times, however, the stock market has also been a good choice for short-term investors, offering up to twice the profit in a short period of time, and has become the second most important investment instrument for our participants, partly due to its low risk and large profit rates in a short period of time. However, due to rising real estate prices, people almost never choose real estate as an investment, and only 2 of our participants with incomes of more than 100,000TL per month chose real estate.
+
+The aim of this study was to observe the relationship between income, income satisfaction, spending and investment habits. However, it should be kept in mind that people's preferences are not only related to income, the level of satisfaction varied according to life/welfare expectation, expenditures varied according to what they personally prefer more frequently, and although income is an important factor in investment, the risk-taking status of people should also be taken into consideration, and the behavioral dimension of economics should also be taken into account when conducting this research.
+
+\newpage
+# References {#references}
+<div id="refs"></div>
+
